@@ -22,15 +22,24 @@
 
     <div>
       <label for="item">Enter a new item:</label>
-      <input type="text" name="item" id="item">
-      <button>Add item</button>
+      <input id="input-el" type="text" name="item" id="item">
+      <button id="button-el">Add item</button>
     </div>
 
-    <ul>
+    <ul id="list-el">
 
     </ul>
 
     <script>
+
+      const inputEl = document.querySelector("#input-el");
+      const buttonEl = document.querySelector("#button-el");
+      const listEl = document.querySelector("#list-el");
+
+      buttonEl.addEventListener("click", () => {
+        console.log(inputEl.value);
+        inputEl.value = '';
+      })
 
     </script>
   </body>
